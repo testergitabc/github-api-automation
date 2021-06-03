@@ -15,12 +15,12 @@ public class LicenseTests {
     public void sendAListRequestAndValidateResponse() {
         given()
                 .when()
-                .auth().basic("", "")//input username/password
+                //.auth().basic("", "") basic authentication - Not required for this End Point
                 .get(BASE_URL + "/licenses")
                 .then()
                 .statusCode(200)
-                .body("[0].name", notNullValue())
-                .body("[0].key", equalTo("agpl-3.0"));
+                .body("[0].name", notNullValue())  // Make sure it is not null
+                .body("[0].key", equalTo("agpl-3.0"));  // Verify that agpl-3.0 is supported
 //        Assert.assertEquals(response.getStatusCode(), 200);
     }
 }
