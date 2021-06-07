@@ -6,6 +6,7 @@ Automation project
 
 # Tests
 1. Testing of the "Licenses" end point, verify the response 200 and the response content is validated
+2. Testing github's gitignore templates api, verifying 200 OK response and validating specific template(eg Java)
 
 # Running the test
 1. cd to project root directory <project-root>
