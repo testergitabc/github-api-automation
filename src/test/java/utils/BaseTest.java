@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
 
+    private  String baseUrl = "https://api.github.com";
     protected static PropertiesReader propertiesReader = new PropertiesReader();
 
     @BeforeTest
@@ -22,5 +23,12 @@ public class BaseTest {
         return RandomUtils.nextInt(100, 999);
     }
 
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
+    }
 }
 
