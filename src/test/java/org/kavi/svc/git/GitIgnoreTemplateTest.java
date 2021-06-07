@@ -1,13 +1,13 @@
 package org.kavi.svc.git;
 
-import org.kavi.svc.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utils.BaseTest;
 
 import static io.restassured.RestAssured.given;
 
 
-public class GitIgnoreTemplateTest extends BaseTest{
+public class GitIgnoreTemplateTest  extends BaseTest {
     @Test
     public void testGitIgnoreTemplateResponse() {
         String result =  given()
